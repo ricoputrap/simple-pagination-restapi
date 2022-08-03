@@ -1,4 +1,4 @@
-const populateUsers = (total) => {
+const populateData = (total, label) => {
   const users = [];
 
   for (let i = 0; i < total; i++) {
@@ -6,11 +6,12 @@ const populateUsers = (total) => {
 
     users.push({
       id,
-      name: `User ${id}`
+      name: `${label} ${id}`
     });
   }
 
   return users;
 }
 
-export const users = populateUsers(100);
+export const users = populateData(100, "User");
+export const posts = populateData(100, "Post");
